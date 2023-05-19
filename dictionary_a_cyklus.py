@@ -14,8 +14,13 @@ students_result = {
     "Harry": 85,
     "Ron": 71,
     "Hermionna": 93,
-    "Draco": 66,
+    "Draco": 55,
 }
+
+# 91 = excelentni
+# 81 = vynikajici
+# 71 = splneno
+# 61 = nesplneno
 
 hodnoceni = {} # vytvorime prazdny dictionary
 
@@ -117,5 +122,41 @@ for one_animal in zvirata:
         hodnoceni = "kratkovekost"
     hodnoceni_veku[one_animal] = hodnoceni
 
-print(hodnoceni_veku)
+#print(hodnoceni_veku)
+
+students_result = {
+    "Harry": 85,
+    "Ron": 71,
+    "Hermionna": 93,
+    "Draco": 55,
+}
+
+# 91 = excelentni
+# 81 = vynikajici
+# 71 = splneno
+# 61 = nesplneno
+
+vysledky = {}
+
+for name in students_result:
+    #print(name)
+    hodnoceni = ""
+    key = students_result[name]
+    if key >= 91:
+        hodnoceni = "excelentni"
+    elif key >= 81:
+        hodnoceni = "vynikajici"
+    elif key >= 71:
+        hodnoceni = "splneno"
+    elif key < 70:
+        hodnoceni = "nesplneno"
+    vysledky[name] = hodnoceni
+
+print(vysledky)
+
+
+
+
+
+
 
