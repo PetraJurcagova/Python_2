@@ -74,12 +74,48 @@ ovoce = {
     "pomelo": 715,
 }
 
-
 #1000 = prebytek
 #864 = splneno
 #715 = nedostatek
 
-for jedno_ovoce in ovoce:
-    print(jedno_ovoce) # A)vypsani key = nazvy ovoce 
+# vytvoreni prazdneho dictionary
+stav_zasob = {} #2)
 
+for jedno_ovoce in ovoce:
+    #print(jedno_ovoce) # A)vypsani key = nazvy ovoce 
+    pocet = "" #3) vytvoreni prazdneho stringu, kam se budou ukladat udaje o mnozstvi
+    mnozstvi = ovoce[jedno_ovoce] # 4) vypsani podminek
+    if mnozstvi == 1000:
+        pocet = "prebytek"
+    elif mnozstvi == 715:
+        pocet = "nedostatek"
+    elif mnozstvi == 864:
+        pocet = "splneno"
+    stav_zasob[jedno_ovoce] = pocet #5) vypsani nov2 naplneneho dictionary
+#print(stav_zasob)
+
+zvirata = {
+    "kun": 10,
+    "morce":5,
+    "holub": 2,
+}
+# 10 = dlouhovekost
+#5 = stredni delka
+#2 = kratovekost
+
+hodnoceni_veku = {}
+
+for one_animal in zvirata:
+    #print(one_animal)
+    hodnoceni = ""
+    years = zvirata[one_animal]
+    if years == 10:
+        hodnoceni = "dlouhovekost"
+    elif years == 5:
+        hodnoceni = "stredni delka"
+    elif years == 2:
+        hodnoceni = "kratkovekost"
+    hodnoceni_veku[one_animal] = hodnoceni
+
+print(hodnoceni_veku)
 
