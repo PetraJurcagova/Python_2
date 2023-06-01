@@ -1,20 +1,18 @@
 from data import data
 import random
 
-data_len = len(data)
-#print(data_len)
-#random.randint(len(data))
-random_number_1 =  random.randint (0, data_len -1)
-random_number_2 = random.randint(0, data_len -1)
 
-print(random_number_1) #, kontrolni vypis
+# predelani na funkci
+def account_generator(all_accounts):
+    data_len = len(all_accounts)
 
-# vygenerujeme dva nahodne ucty
-account_1 = data [random_number_1]
+    random_number =  random.randint (0, data_len -1)
+    return all_accounts [random_number]
 
-account_2 = data [random_number_2]
+    
+account_1 = account_generator(data)
 
-print(account_1)
-print(account_2)
+account_2 = account_generator(data)
+
 
 
