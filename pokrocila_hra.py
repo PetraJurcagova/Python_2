@@ -16,13 +16,13 @@ def printing_options(acc1, acc2):
 
 # hra
 def game():
-    lets_continue = True
+    lets_continue = True # nastaveni promenne pro cyklus while
     right_a = ""
     score = 0
 
     account_1 = account_generator(data)
     account_2 = account_generator(data)
-    
+
 # pokus o vylouceni opakovani stejneho uctu v ramci jedne nabidky
     if account_1 == account_2:
         account_2 = account_generator(data)
